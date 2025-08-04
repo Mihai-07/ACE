@@ -1,18 +1,40 @@
-# ACE - Agentic Code Executor
+# ACE - Agentic Code Executor 🤖
 
 ACE is an AI-powered assistant that can execute Python code to solve complex problems. This demo allows you to interact with the agent in a single chat session.
 
-## Features
-- Ask the agent any question or give it a task
-- The agent can execute Python code to help solve your problems
-- All code executed by the agent is shown for transparency
+## Features ✨
+- 💬 Ask the agent any question or give it a task
+- 🐍 The agent can execute Python code to help solve your problems
+- 👁️ All code executed by the agent is shown for transparency
 
-## Usage
+## Installation 🚀
+
+### Using pip
+```bash
+pip install -r requirements.txt
+streamlit run main.py
+```
+
+### Using conda
+```bash
+conda create -n ace python=3.9
+conda activate ace
+pip install -r requirements.txt
+streamlit run main.py
+```
+
+### Using uv (recommended)
+```bash
+uv add -r requirements.txt
+uv run streamlit run main.py
+```
+
+## Usage 📖
 1. Run the app with Streamlit
 2. Enter your question or task in the chat input
 3. View the agent's response and any code it runs
 
-## Security
+## Security 🔒
 - The agent will only execute code that complies with the included SECURITY NOTE
 - Use at your own risk
 
