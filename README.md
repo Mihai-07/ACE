@@ -40,7 +40,9 @@ uv run streamlit run main.py
 
 ---
 
-**GitHub Repository:** [https://github.com/Mihai-07/ACE](https://github.com/Mihai-07/ACE)
+**GitHub Repository URL:** [https://github.com/Mihai-07/ACE](https://github.com/Mihai-07/ACE)
+
+**Streamlit Cloud URL:** [https://mihai-07-ace.streamlit.app](https://mihai-07-ace.streamlit.app)
 
 **License:** GNU General Public License v3.0 ([GPL-3.0](https://www.gnu.org/licenses/gpl-3.0.html))
 
