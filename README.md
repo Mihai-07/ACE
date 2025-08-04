@@ -11,6 +11,8 @@ ACE is an AI-powered assistant that can execute Python code to solve complex pro
 
 ### Using pip
 ```bash
+python3 -m venv venv
+source venv/bin/activate
 pip install -r requirements.txt
 streamlit run main.py
 ```
