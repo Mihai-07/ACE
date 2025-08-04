@@ -1,0 +1,23 @@
+[project]
+name = "ace"
+version = "0.1.0"
+description = "Agentic Code Executor - AI-powered assistant that can execute Python code"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "cx-oracle>=8.3.0",
+    "langchain-experimental>=0.3.4",
+    "langchain-openai>=0.3.28",
+    "mysql-connector-python>=9.4.0",
+    "nltk>=3.9.1",
+    "numpy>=2.3.2",
+    "pandas>=2.3.1",
+    "psycopg2-binary>=2.9.10",
+    "pymssql>=2.3.7",
+    "pymysql>=1.1.1",
+    "pyodbc>=5.2.0",
+    "scipy>=1.16.1",
+    "streamlit>=1.47.1",
+    "sympy>=1.14.0",
+    "watchdog>=6.0.0",
+]
