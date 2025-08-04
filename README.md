@@ -19,7 +19,7 @@ streamlit run main.py
 
 ### Using conda
 ```bash
-conda create -n ace python=3.9
+conda create -n ace python=3.11
 conda activate ace
 pip install -r requirements.txt
 streamlit run main.py
