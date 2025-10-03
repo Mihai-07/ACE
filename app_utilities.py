@@ -5,7 +5,6 @@ from langchain_openai import ChatOpenAI
 from langchain_experimental.tools import PythonAstREPLTool
 from nltk.tokenize import word_tokenize
 import streamlit as st
-import asyncio
 import os
 
 class StreamCallbackHandler(BaseCallbackHandler):
