@@ -92,12 +92,9 @@ format_chat_history = lambda chat_history: (
 
 def call_agent(chat_history, task, handler):
     llm = ChatOpenAI(
-        model="deepseek/deepseek-chat-v3-0324:free",
-        temperature=0,
+        model="gpt-5-nano-2025-08-07",
         streaming=True,
-        callbacks=[handler],
-        base_url="https://openrouter.ai/api/v1",
-        api_key=os.getenv("DEEPSEEK_API_KEY")
+        callbacks=[handler]
     )
 
     agent = create_tool_calling_agent(
