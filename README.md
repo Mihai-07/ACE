@@ -31,6 +31,23 @@ uv add -r requirements.txt
 uv run streamlit run main.py
 ```
 
+## Configuration 🔧
+- **OpenAI API key (required)**: The app now uses the official OpenAI API via `langchain-openai`.
+  - Recommended (Streamlit secrets): create `.streamlit/secrets.toml` with:
+
+    ```toml
+    [api_keys]
+    openai = "YOUR_OPENAI_API_KEY"
+    ```
+
+  - Or set an environment variable before running Streamlit:
+
+    ```bash
+    export OPENAI_API_KEY="YOUR_OPENAI_API_KEY"
+    ```
+
+- **Model selection**: The default model is set in `app_utilities.py` via `ChatOpenAI`. Update the `model` parameter there if you want to change it.
+
 ## Usage 📖
 1. Run the app with Streamlit
 2. Enter your question or task in the chat input
