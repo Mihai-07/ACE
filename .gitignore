@@ -2,7 +2,7 @@
 # chats.json
 
 # Streamlit
-.streamlit/secrets.toml
+.streamlit/
 
 # Python
 __pycache__/
