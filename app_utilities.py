@@ -2,6 +2,7 @@ from langchain.agents import create_tool_calling_agent, AgentExecutor
 from langchain.callbacks.base import BaseCallbackHandler
 from langchain.prompts import ChatPromptTemplate
 from langchain_openai import ChatOpenAI
+from langchain.tools import tool
 from langchain_experimental.tools import PythonAstREPLTool
 from nltk.tokenize import word_tokenize
 import streamlit as st
@@ -39,6 +40,9 @@ For tasks which involve heavy computation or abstract math, you have these libra
 
 Use them to maximize efficiency!
 
+IMPORTANT:
+
+For symbolic math tasks (E.g differentiating, integrating, solving equations, ...), you MUST write your math response as a block of LaTeX code and then tell the user to use a LaTeX rendering engine/website to render the code!
 For tasks which involve you writing code on the screen as output to the user, MAKE SURE to wrap it inside a code block like this:
 
 ~~~<programming-language>
@@ -111,36 +115,6 @@ def call_agent(chat_history, task, handler):
     )
 
     result = agent_executor.invoke({
-        "chat_history": chat_history,
-        "task": task
-    })
-
-    return result["output"]
-
-async def call_agent_async(chat_history, task, handler):
-    llm = ChatOpenAI(
-        model="deepseek/deepseek-chat-v3-0324:free",
-        temperature=0,
-        streaming=True,
-        callbacks=[handler],
-        base_url="https://openrouter.ai/api/v1",
-        api_key=os.getenv("DEEPSEEK_API_KEY")
-    )
-
-    agent = create_tool_calling_agent(
-        llm=llm,
-        tools=[PythonAstREPLTool()],
-        prompt=prompt
-    )
-
-    agent_executor = AgentExecutor(
-        agent=agent,
-        tools=[PythonAstREPLTool()],
-        handle_parsing_errors=True,
-        verbose=True
-    )
-
-    result = await agent_executor.ainvoke({
         "chat_history": chat_history,
         "task": task
     })
